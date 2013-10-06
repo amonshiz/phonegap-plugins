@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="org.apache.cordova.plugins.EmailComposerWithAttachments"
+    version="1.2.0">
+
+    <name>EmailComposerWithAttachments</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- ios -->
+    <platform name="ios">            
+        <config-file target="config.xml" parent="/*">
+            <feature name="EmailComposer">
+                <param name="ios-package" value="EmailComposer" />
+            </feature>
+        </config-file>
+        <js-module src="www/EmailComposer.js" name="EmailComposer">
+            <clobbers target="emailcomposer" />
+        </js-module>
+
+        <header-file src="src/ios/EmailComposer.h" />
+	    <source-file src="src/ios/EmailComposer.m" />
+    </platform>
+
+</plugin>

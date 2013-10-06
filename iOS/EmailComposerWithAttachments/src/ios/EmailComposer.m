@@ -115,7 +115,7 @@
                     counter++;
                 }
                 @catch (NSException *exception) {
-                    DLog(@"Cannot attach file at path %@; error: %@", path, exception);
+                    NSLog(@"Cannot attach file at path %@; error: %@", path, exception);
                 }
             }
         }
@@ -129,7 +129,7 @@
     } else {
         [self returnWithCode:RETURN_CODE_EMAIL_NOTSENT];
     }
-    [mailComposer release];
+//    [mailComposer release];
 }
 
 
