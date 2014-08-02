@@ -48,6 +48,8 @@
     var emailcomposer = new EmailComposer();
     module.exports = emailcomposer;
 
+    console.log('EmailComposerWithAttachments.js loaded ...');
+
 //cordova.addConstructor(function()  {
 //					   if(!window.plugins)
 //					   {
